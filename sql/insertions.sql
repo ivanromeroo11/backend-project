@@ -8,7 +8,7 @@ INSERT INTO villas (
 INSERT INTO villas (
   name, ninjas, bijuu
 ) VALUES (
-  'Villa Oculta de la Lluvia', 'Pain', 'Matatabi, Kokuo, Saiken, Choumei'
+  'Villa Oculta de la Lluvia', 'Pain', ''
 );
 
 INSERT INTO villas (
@@ -38,189 +38,309 @@ INSERT INTO villas (
 --Insercion de ninjas
 
 INSERT INTO ninjas (
-  name, villa, bijuu, 
+  name, bijuu, villas_id,
 ) VALUES (
-  'Naruto', 'Villa Oculta de la Hoja', 'kyubi', 
+  'Naruto', 'kyubi', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Hoja'
+  ) 
 );
 
 INSERT INTO ninjas (
-  name, villa, bijuu, 
+  name, bijuu, villas_id, 
 ) VALUES (
-  'Sasuke', 'Villa Oculta de la Hoja', '', 
+  'Sasuke', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Hoja'
+  ) 
 );
 
 INSERT INTO ninjas (
-  name, villa, bijuu,  
+  name, bijuu, villas_id, 
 ) VALUES (
-  'Kakashi', 'Villa Oculta de la Hoja', '', 
+  'Kakashi', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Hoja'
+  ) 
 );
 
 INSERT INTO ninjas (
-  name, villa, bijuu,  
+  name, bijuu, villas_id,  
 ) VALUES (
-  'Jiraya', 'Villa Oculta de la Hoja', '', 
+  'Jiraya', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Hoja'
+  ) 
 );
 
 INSERT INTO ninjas (
-  name, villa, bijuu,  
+  name, bijuu, villas_id,  
 ) VALUES (
-  'Itachi', 'Villa Oculta de la Hoja', '', 
+  'Itachi', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Hoja'
+  )
 );
 
 INSERT INTO ninjas (
-  name, villa, bijuu,  
+  name, bijuu, villas_id,  
 ) VALUES (
-  'Killer Bee', 'Villa Oculta de la Nube', 'Hachibi', 
+  'Killer Bee', 'Hachibi', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Nube'
+  ) 
 );
 
 INSERT INTO ninjas (
-  name, villa, bijuu,  
+  name, bijuu, villas_id,  
 ) VALUES (
-  'Raikage', 'Villa Oculta de la Nube', '', 
+  'Raikage', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Nube'
+  ) 
 );
 
 INSERT INTO ninjas (
-  name, villa, bijuu,  
+  name, bijuu, villas_id, 
 ) VALUES (
-  'Darui', 'Villa Oculta de la Nube', '', 
-);
-
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Gaara', 'Villa Oculta de la Arena', 'Shukaku', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Temari', 'Villa Oculta de la Arena', '', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Kankuro', 'Villa Oculta de la Arena', '', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Chiyo', 'Villa Oculta de la Arena', '', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Yagura', 'Villa Oculta de la Niebla', 'Isobu', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Kisame', 'Villa Oculta de la Niebla', '', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Chojuro', 'Villa Oculta de la Niebla', '', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Terumi', 'Villa Oculta de la Niebla', '', 
-);
-
-
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Roshi', 'Villa Oculta de la Roca', 'Son Goku', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Onoki', 'Villa Oculta de la Roca', '', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Deidara', 'Villa Oculta de la Roca', '', 
-);
-
-INSERT INTO ninjas (
-  name, villa, bijuu,  
-) VALUES (
-  'Kurotsuchi', 'Villa Oculta de la Roca', '', 
+  'Darui', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Nube'
+  ) 
 );
 
 
 INSERT INTO ninjas (
-  name, villa, bijuu,  
+  name, bijuu, villas_id,  
 ) VALUES (
-  'Pain', 'Villa Oculta de la Lluvia', '', 
+  'Gaara', 'Shukaku', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Arena'
+  ) 
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id, 
+) VALUES (
+  'Temari', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Arena'
+  ) 
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Kankuro', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Arena'
+  )
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Chiyo', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Arena'
+  )
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Yagura', 'Isobu', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Niebla'
+  ) 
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Kisame', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Niebla'
+  ) 
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Chojuro', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Niebla'
+  ) 
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Terumi', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Niebla'
+  )  
+);
+
+
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Roshi', 'Son Goku', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Roca'
+  )  
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Onoki', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Roca'
+  )  
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Deidara', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Roca'
+  )   
+);
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Kurotsuchi', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Roca'
+  )   
+);
+
+
+INSERT INTO ninjas (
+  name, bijuu, villas_id,  
+) VALUES (
+  'Pain', '', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Lluvia'
+  )  
 );
 
 --Insercion de bijuus
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Shukaku', 'Villa Oculta de la Arena', 'Gaara', 
+  'Shukaku', 'Villa Oculta de la Arena', 'Gaara', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Arena'
+  )   
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Matatabi', 'Villa Oculta de la Lluvia', 'Pain', 
+  'Matatabi',  (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Lluvia'
+  )  
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Isobu', 'Villa Oculta de la Niebla', 'Yagura', 
+  'Isobu', 'Yagura', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Niebla'
+  )  
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Son Goku', 'Villa Oculta de la Roca', 'Roshi', 
+  'Son Goku', 'Roshi', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Roca'
+  )   
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Kokuo', 'Villa Oculta de la Lluvia', 'Pain', 
+  'Kokuo', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Lluvia'
+  )   
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Saiken', 'Villa Oculta de la Lluvia', 'Pain', 
+  'Saiken', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Lluvia'
+  )  
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Choumei', 'Villa Oculta de la Lluvia', 'Pain', 
+  'Choumei', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Lluvia'
+  )  
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Hachibi', 'Villa Oculta de la Nube', 'Killer Bee', 
+  'Hachibi', 'Killer Bee', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Nube'
+  )   
 );
 
 INSERT INTO bijuus (
-  name, ninjas, villas,  
+  name, ninjas, villas_id,  
 ) VALUES (
-  'Kyubi', 'Villa Oculta de la Hoja', 'Naruto', 
+  'Kyubi', 'Naruto', (
+    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Hoja'
+  )   
 );
 
 --Insercion elementos
+
+INSERT INTO elementos (
+  name,  
+) VALUES (
+  'Agua', 
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Fuego', 
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Tierra', 
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Viento', 
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Rayo', 
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Arena',
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Lava',
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Vapor',
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Acido',
+);
+
+INSERT INTO elementos (
+  name,   
+) VALUES (
+  'Tinta',
+);
