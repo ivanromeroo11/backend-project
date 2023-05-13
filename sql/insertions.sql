@@ -20,7 +20,7 @@ INSERT INTO villas (
 INSERT INTO villas (
   name, ninjas, bijuu
 ) VALUES (
-  'Villa Oculta de la Arena', 'Gaara, Temari, Kankuro, Chiyo', 'Shukaku'
+  'Villa Oculta de la Arena', 'Gaara, Temari, Chiyo', 'Shukaku'
 );
 
 INSERT INTO villas (
@@ -118,13 +118,6 @@ INSERT INTO ninjas (
   ) 
 );
 
-INSERT INTO ninjas (
-  name, bijuu, villas_id,  
-) VALUES (
-  'Kankuro', '', (
-    SELECT id FROM villas WHERE name LIKE 'Villa Oculta de la Arena'
-  )
-);
 
 INSERT INTO ninjas (
   name, bijuu, villas_id,  
@@ -343,4 +336,152 @@ INSERT INTO elementos (
   name,   
 ) VALUES (
   'Tinta',
+);
+
+INSERT INTO elementos (
+  name,
+) VALUES (
+  'Medico'
+)
+
+--Insercion de ninjas_elementos
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Naruto'),
+  (SELECT id FROM elementos WHERE name = 'viento')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Sasuke'),
+  (SELECT id FROM elementos WHERE name = 'Rayo, Fuego')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Jiraya'),
+  (SELECT id FROM elementos WHERE name = 'Viento, Fuego, Agua')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Itachi'),
+  (SELECT id FROM elementos WHERE name = 'Fuego')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'kakashi'),
+  (SELECT id FROM elementos WHERE name = 'Rayo, Tierra')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Pain'),
+  (SELECT id FROM elementos WHERE name = 'Viento, Fuego, Tierra, Agua, Rayo')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Killer Bee'),
+  (SELECT id FROM elementos WHERE name = 'Rayo')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Raikage'),
+  (SELECT id FROM elementos WHERE name = 'Rayo')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Darui'),
+  (SELECT id FROM elementos WHERE name = 'Rayo')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Gaara'),
+  (SELECT id FROM elementos WHERE name = 'Arena')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Temari'),
+  (SELECT id FROM elementos WHERE name = 'Viento')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Chiyo'),
+  (SELECT id FROM elementos WHERE name = 'Medico')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Yagura'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Chojuro'),
+  (SELECT id FROM elementos WHERE name = 'Agua')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Kisame'),
+  (SELECT id FROM elementos WHERE name = 'Agua')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Terumi'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Tierra, Fuego, Viento, Lava, Vapor')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Roshi'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Deidara'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Onoki'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+);
+
+INSERT INTO ninjas_elementos (
+  ninjas_id, elementos_id
+) VALUES (
+  (SELECT id FROM ninjas WHERE name LIKE 'Kurotshuchi'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
 );
