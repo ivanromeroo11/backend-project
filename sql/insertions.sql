@@ -344,6 +344,18 @@ INSERT INTO elementos (
   'Medico'
 )
 
+INSERT INTO elementos (
+  name,
+) VALUES (
+  'Explosion'
+)
+
+INSERT INTO elementos (
+  name,
+) VALUES (
+  'Polvo'
+)
+
 --Insercion de ninjas_elementos
 
 INSERT INTO ninjas_elementos (
@@ -462,26 +474,28 @@ INSERT INTO ninjas_elementos (
   ninjas_id, elementos_id
 ) VALUES (
   (SELECT id FROM ninjas WHERE name LIKE 'Roshi'),
-  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+  (SELECT id FROM elementos WHERE name = 'Fuego, Tierra, Lava')
 );
 
 INSERT INTO ninjas_elementos (
   ninjas_id, elementos_id
 ) VALUES (
   (SELECT id FROM ninjas WHERE name LIKE 'Deidara'),
-  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+  (SELECT id FROM elementos WHERE name = 'Tierra, Explosion')
 );
 
 INSERT INTO ninjas_elementos (
   ninjas_id, elementos_id
 ) VALUES (
   (SELECT id FROM ninjas WHERE name LIKE 'Onoki'),
-  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+  (SELECT id FROM elementos WHERE name = 'Fuego, Viento, Tierra, Rayo, Polvo')
 );
 
 INSERT INTO ninjas_elementos (
   ninjas_id, elementos_id
 ) VALUES (
   (SELECT id FROM ninjas WHERE name LIKE 'Kurotshuchi'),
-  (SELECT id FROM elementos WHERE name = 'Agua, Viento')
+  (SELECT id FROM elementos WHERE name = 'Agua, Tierra, Fuego, Lava')
 );
+
+--Insercion bijuus_elementos

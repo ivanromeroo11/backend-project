@@ -1,11 +1,11 @@
- --Borrado de todo
- DROP TABLE IF EXISTS villas;
- DROP TABLE IF EXISTS ninjas;
- DROP TABLE IF EXISTS bijuus;
- DROP TABLE IF EXISTS elementos
- DROP TABLE IF EXISTS ninjas_elementos
- DROP TABLE IF EXISTS bijuus_elementos
- DROP EXTENSION IF EXISTS "uuid-ossp";
+--  --Borrado de todo
+--  DROP TABLE IF EXISTS villas;
+--  DROP TABLE IF EXISTS ninjas;
+--  DROP TABLE IF EXISTS bijuus;
+--  DROP TABLE IF EXISTS elementos
+--  DROP TABLE IF EXISTS ninjas_elementos
+--  DROP TABLE IF EXISTS bijuus_elementos
+--  DROP EXTENSION IF EXISTS "uuid-ossp";
 
 --Creacion de extensiones 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
@@ -13,14 +13,14 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 --Creacion de tablas
 CREATE TABLE IF NOT EXISTS villas (
-    id PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
     name TEXT NOT NULL,
     ninjas TEXT NOT NULL,
-    bijuu TEXT,
+    bijuu TEXT
 );
 
 CREATE TABLE IF NOT EXISTS ninjas (
-    id PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+    id uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
     name TEXT NOT NULL,
     villa TEXT NOT NULL,
     bijuu TEXT,
@@ -30,14 +30,14 @@ CREATE TABLE IF NOT EXISTS ninjas (
 );
 
 CREATE TABLE IF NOT EXISTS elementos (
-    id PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+    id uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
     name TEXT NOT NULL,
     ON UPDATE CASCADE
     ON DELETE SET NULL
 );
 
 CREATE TABLE IF NOT EXISTS bijuus (
-    id PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+    id uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
     name TEXT NOT NULL,
     ninjas TEXT,
     villa TEXT NOT NULL,
