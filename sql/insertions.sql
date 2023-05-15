@@ -342,19 +342,27 @@ INSERT INTO elementos (
   name,
 ) VALUES (
   'Medico'
-)
+);
 
 INSERT INTO elementos (
   name,
 ) VALUES (
   'Explosion'
-)
+);
 
 INSERT INTO elementos (
   name,
 ) VALUES (
   'Polvo'
-)
+);
+
+
+INSERT INTO elementos (
+  name,
+) VALUES (
+  'Cristal'
+);
+
 
 --Insercion de ninjas_elementos
 
@@ -499,3 +507,68 @@ INSERT INTO ninjas_elementos (
 );
 
 --Insercion bijuus_elementos
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Shukaku'),
+  (SELECT id FROM elementos WHERE name = 'Viento, Arena')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Matatabi'),
+  (SELECT id FROM elementos WHERE name = 'Fuego')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Isobu'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Cristal')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Son Goku'),
+  (SELECT id FROM elementos WHERE name = 'Fuego, Tierra, Lava')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Kokuo'),
+  (SELECT id FROM elementos WHERE name = 'Viento, Agua, Vapor')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Saiken'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Acido')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Choumei'),
+  (SELECT id FROM elementos WHERE name = 'Viento')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Hachibi'),
+  (SELECT id FROM elementos WHERE name = 'Agua, Tinta')
+);
+
+INSERT INTO bijuus_elementos (
+  bijuus_id, elementos_id
+) VALUES (
+  (SELECT id FROM bijuus WHERE name LIKE 'Kyubi'),
+  (SELECT id FROM elementos WHERE name = 'Viento, Fuego')
+);
+
+
